@@ -1,9 +1,9 @@
-import { Navbar } from '../components/layouts/Navbar';
+import { LandingNavbar } from '../features/landing/components/LandingNavbar';
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <LandingNavbar />
     </main>
   );
 }
