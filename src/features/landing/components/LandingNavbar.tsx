@@ -37,7 +37,7 @@ export const LandingNavbar = () => {
       {/* nav for desktop */}
       <nav className="flex absolute left-1/2 -translate-x-1/2">
         <Link
-          href={'/'}
+          href={'/#resumen'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
         >
           Resumen
@@ -64,7 +64,7 @@ export const LandingNavbar = () => {
       >
         <nav className="absolute top-0 right-0 h-full w-full pt-32 flex flex-col items-center">
           <Link
-            href={'/'}
+            href={'/#resumen'}
             className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
             Resumen

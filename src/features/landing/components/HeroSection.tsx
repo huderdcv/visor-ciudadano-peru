@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HeroSection = () => {
   return (
-    <section className="w-full h-[calc(100vh-5rem)] ">
+    <section className="px-8 max-w-7xl w-full mx-auto h-[calc(100vh-5rem)] border-b border-slate-200 dark:border-slate-800">
       <div className="w-full relative top-1/6 flex flex-col items-center">
         <p className="uppercase text-blue-400 font-semibold mb-9 text-center text-sm md:text-base flex items-center gap-1 border border-blue-200 dark:border-slate-500 px-2 py-1 rounded-3xl bg-blue-50 dark:bg-slate-800">
           <span className="relative flex h-2 w-2">
