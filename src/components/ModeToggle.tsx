@@ -10,7 +10,7 @@ export const ModeToggle = () => {
   return (
     <button
       onClick={onChangeTheme}
-      className="flex justify-center items-center transition-all duration-300 dark:bg-blue-950  cursor-pointer w-10 h-10 border-2 border-slate-300 shadow-sm text-slate-500 rounded-lg bg-white hover:border-blue-200 hover:text-blue-500"
+      className="flex justify-center items-center transition-all duration-300 dark:bg-blue-950  cursor-pointer w-10 h-10 border-2 border-slate-300 shadow-sm text-slate-500 rounded-lg bg-white hover:border-blue-200 hover:text-blue-500 relative z-60"
     >
       <Sun className="scale-0 absolute dark:scale-100 rotate-0 dark:rotate-90 transition-all" />
       <Moon className="dark:scale-0 rotate-0 dark:rotate-90 transition-all" />
