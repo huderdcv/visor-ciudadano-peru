@@ -12,7 +12,7 @@ export const LandingNavbar = () => {
     <header className="flex justify-between items-center h-20 shadow-md px-8 fixed z-40 top-0 w-full dark:border-b dark:border-slate-800">
       <Link href={'/'} className="flex gap-2 items-center group">
         <ShieldUser className="bg-blue-700 text-white  w-10 h-10 p-2 rounded-lg group-hover:bg-blue-800 transition-all duration-300" />
-        <span className="font-bold text-xl hidden md:block">
+        <span className="font-bold text-xl hidden lg:block">
           Visor Ciudadano
         </span>
       </Link>
@@ -35,7 +35,7 @@ export const LandingNavbar = () => {
       </button>
 
       {/* nav for desktop */}
-      <nav className="flex">
+      <nav className="flex absolute left-1/2 -translate-x-1/2">
         <Link
           href={'/'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
