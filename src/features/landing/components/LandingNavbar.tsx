@@ -9,23 +9,13 @@ export const LandingNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center h-20 shadow-md px-8 fixed top-0 w-full dark:border-b dark:border-slate-800">
+    <header className="flex justify-between items-center h-20 shadow-md px-8 fixed z-40 top-0 w-full dark:border-b dark:border-slate-800">
       <Link href={'/'} className="flex gap-2 items-center group">
         <ShieldUser className="bg-blue-700 text-white  w-10 h-10 p-2 rounded-lg group-hover:bg-blue-800 transition-all duration-300" />
         <span className="font-bold text-xl hidden md:block">
           Visor Ciudadano
         </span>
       </Link>
-
-      {/* nav for desktop */}
-      <nav>
-        <Link
-          href={'/'}
-          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
-        >
-          Resumen
-        </Link>
-      </nav>
 
       {/* toogle button for mobile */}
       <button
@@ -44,9 +34,31 @@ export const LandingNavbar = () => {
         />
       </button>
 
+      {/* nav for desktop */}
+      <nav className="flex">
+        <Link
+          href={'/'}
+          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
+        >
+          Resumen
+        </Link>
+        <Link
+          href={'/'}
+          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
+        >
+          Mapa de calor
+        </Link>
+        <Link
+          href={'/'}
+          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
+        >
+          Tendencias
+        </Link>
+      </nav>
+
       {/* nav for mobile */}
       <div
-        className={`bg-slate/20 fixed inset-0 z-50 w-full backdrop-blur-sm md:hidden transition-all duration-500 ${
+        className={`bg-slate/20 fixed inset-0 z-50 w-full backdrop-blur-lg md:hidden transition-all duration-500 ${
           isNavOpen ? '' : 'opacity-0 pointer-events-none invisible'
         }`}
       >
@@ -56,6 +68,18 @@ export const LandingNavbar = () => {
             className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
             Resumen
+          </Link>
+          <Link
+            href={'/'}
+            className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
+          >
+            Mapa de Calor
+          </Link>
+          <Link
+            href={'/'}
+            className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800"
+          >
+            Tendencias
           </Link>
         </nav>
       </div>
