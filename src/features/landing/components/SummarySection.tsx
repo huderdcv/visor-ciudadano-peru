@@ -51,8 +51,16 @@ export const SummarySection = () => {
           </span>
         </li>
       </ul>
-      <div className="w-full bg-slate-100 h-60 rounded-lg flex items-center justify-center border-2 border-slate-200 text-slate-500">
-        Power BI: Dashboard de resumen
+      <div className="w-full bg-slate-100 rounded-lg flex items-center justify-center border-2 border-slate-200 text-slate-500 aspect-video">
+        <iframe
+          title="test-visor-ciudadano"
+          // width="1024"
+          // height="1060"
+          className="w-full h-full border-0"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZmU0MmI2ZDQtYTg2Zi00ZjliLWJiNmQtMGFmOGM0MGQ0NDJhIiwidCI6ImZkMDE5MmU1LWIwMjktNGEwYi1hNzVjLTc1NTZiZWVhYmRhZiIsImMiOjR9"
+          frameBorder="0"
+          allowFullScreen={true}
+        ></iframe>
       </div>
     </section>
   );
