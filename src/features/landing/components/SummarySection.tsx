@@ -5,7 +5,7 @@ export const SummarySection = () => {
   return (
     <section
       id="resumen"
-      className="px-8 max-w-7xl w-full mx-auto h-screen pt-24"
+      className="px-8 max-w-7xl w-full mx-auto pt-24 pb-24 border-b border-slate-200 dark:border-slate-800"
     >
       <header>
         <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-500 mb-8">

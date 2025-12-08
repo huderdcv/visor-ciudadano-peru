@@ -1,4 +1,5 @@
 import { HeroSection } from '../features/landing/components/HeroSection';
+import { LandingFooter } from '../features/landing/components/LandingFooter';
 import { LandingNavbar } from '../features/landing/components/LandingNavbar';
 import { SummarySection } from '../features/landing/components/SummarySection';
 
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <SummarySection />
       </main>
+      <LandingFooter />
     </>
   );
 }
