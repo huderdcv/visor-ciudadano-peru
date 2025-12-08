@@ -63,22 +63,22 @@ export const LandingNavbar = () => {
           isNavOpen ? '' : 'opacity-0 pointer-events-none invisible'
         }`}
       >
-        <nav className="absolute top-0 right-0 h-full w-full pt-32 flex flex-col items-center">
+        <nav className="absolute top-0 right-0 h-full w-full pt-32 flex flex-col gap-4 items-center">
           <Link
             href={'/#resumen'}
-            className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
+            className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
             Resumen
           </Link>
           <Link
             href={'/'}
-            className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
+            className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
             Mapa de Calor
           </Link>
           <Link
             href={'/'}
-            className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800"
+            className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800"
           >
             Tendencias
           </Link>
