@@ -57,7 +57,7 @@ export const MapSection = () => {
           // width="1024"
           // height="1060"
           className="w-full h-full border-0"
-          src="https://app.powerbi.com/view?r=eyJrIjoiMzZkODNlZmItNjE0NC00ZGJhLTkxMTQtMGZkYzJkMjI0MWQ1IiwidCI6ImZkMDE5MmU1LWIwMjktNGEwYi1hNzVjLTc1NTZiZWVhYmRhZiIsImMiOjR9"
+          src="https://app.powerbi.com/view?r=eyJrIjoiNmZlYjcxZTktYzRlZC00MGQ2LWJjYzAtM2FlZDFiNGY2Y2ZmIiwidCI6ImZkMDE5MmU1LWIwMjktNGEwYi1hNzVjLTc1NTZiZWVhYmRhZiIsImMiOjR9"
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>
