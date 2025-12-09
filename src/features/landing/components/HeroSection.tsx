@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const HeroSection = () => {
   return (
     <section className="px-8 max-w-7xl w-full mx-auto h-[calc(100vh)] border-b border-slate-200 dark:border-slate-800 ">
@@ -13,11 +15,17 @@ export const HeroSection = () => {
           Decide con libertad en{' '}
           <span className="text-blue-500 block">Cifras reales</span>
         </h1>
-        <p className="text-center text-lg md:text-xl sm:max-w-lg md:max-w-xl text-slate-500 dark:text-slate-400">
+        <p className="text-center text-lg md:text-xl sm:max-w-lg md:max-w-xl text-slate-500 dark:text-slate-400 mb-12">
           Accede a indicadores oficiales de seguridad ciudadana de cada distrito
           del Perú. Datos transparentes para que elijas dónde vivir, visitar o
           emprender con tranquilidad.
         </p>
+        <Link
+          href={`/#resumen`}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 text-base md:text-lg rounded-lg cursor-pointer transition-all duration-300 shadow-lg"
+        >
+          Explorar datos &darr;
+        </Link>
       </div>
     </section>
   );

@@ -51,7 +51,7 @@ export const MapSection = () => {
           </span>
         </li>
       </ul>
-      <div className="w-full bg-slate-100 rounded-lg flex items-center justify-center border-2 border-slate-200 text-slate-500 aspect-4/3 overflow-hidden">
+      <div className="w-full bg-slate-100 rounded-lg flex items-center justify-center border-2 border-slate-200 text-slate-500 aspect-video overflow-hidden">
         <iframe
           title="test-visor-ciudadano"
           // width="1024"
