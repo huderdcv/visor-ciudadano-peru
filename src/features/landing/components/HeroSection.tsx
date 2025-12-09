@@ -12,16 +12,17 @@ export const HeroSection = () => {
           Datos actualizados a octubre 2025
         </p>
         <h1 className="text-center text-slate-900 dark:text-white text-5xl md:text-7xl font-extrabold mb-8">
-          Decide con libertad en{' '}
-          <span className="text-blue-500 block">Cifras reales</span>
+          Monitor de Seguridad Ciudadana
+          <span className="text-blue-500 block">Criminalidad en el Perú</span>
         </h1>
         <p className="text-center text-lg md:text-xl sm:max-w-lg md:max-w-xl text-slate-500 dark:text-slate-400 mb-12">
-          Accede a indicadores oficiales de seguridad ciudadana de cada distrito
-          del Perú. Datos transparentes para que elijas dónde vivir, visitar o
-          emprender con tranquilidad.
+          La plataforma líder de inteligencia delictiva basada en datos abiertos
+          de la Policía Nacional del Perú (PNP). Consulte denuncias, mapas de
+          calor y rankings de peligrosidad en tiempo real para tomar decisiones
+          informadas sobre dónde vivir, invertir o transitar.
         </p>
         <Link
-          href={`/#resumen`}
+          href={`/#panorama`}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 text-base md:text-lg rounded-lg cursor-pointer transition-all duration-300 shadow-lg"
         >
           Explorar datos &darr;

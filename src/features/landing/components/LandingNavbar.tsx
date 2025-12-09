@@ -37,16 +37,16 @@ export const LandingNavbar = () => {
       {/* nav for desktop */}
       <nav className="flex absolute left-1/2 -translate-x-1/2">
         <Link
-          href={'/#resumen'}
+          href={'/#panorama'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
         >
-          Resumen
+          Panorama
         </Link>
         <Link
-          href={'/'}
+          href={'/#mapa-del-delito'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
         >
-          Mapa de calor
+          Mapa del delito
         </Link>
         <Link
           href={'/'}
@@ -65,16 +65,16 @@ export const LandingNavbar = () => {
       >
         <nav className="absolute top-0 right-0 h-full w-full pt-32 flex flex-col gap-4 items-center">
           <Link
-            href={'/#resumen'}
+            href={'/#panorama'}
             className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
-            Resumen
+            Panorama
           </Link>
           <Link
-            href={'/'}
+            href={'/#mapa-del-delito'}
             className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
-            Mapa de Calor
+            Mapa del delito
           </Link>
           <Link
             href={'/'}
