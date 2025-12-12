@@ -1,5 +1,4 @@
-import { ChartColumnBig, Check } from 'lucide-react';
-import React from 'react';
+import { ChartColumnBig, Check, Earth } from 'lucide-react';
 
 export const MapSection = () => {
   return (
@@ -9,7 +8,7 @@ export const MapSection = () => {
     >
       <header>
         <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-500 mb-8">
-          <ChartColumnBig className="w-8 h-8 " />
+          <Earth className="w-8 h-8 " />
         </div>
         <h2 className="text-2xl font-semibold mb-3">
           Mapa del Delito: Inteligencia Territorial y Zonas de Riesgo

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ModeToggle } from '../../../components/ModeToggle';
-import { Menu, ShieldUser, X } from 'lucide-react';
+import { Menu, ShieldUser, Sparkle, Sparkles, X } from 'lucide-react';
 import { useState } from 'react';
 
 export const LandingNavbar = () => {
@@ -20,7 +20,7 @@ export const LandingNavbar = () => {
       {/* toogle button for mobile */}
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className="absolute cursor-pointer left-1/2 -translate-x-1/2  z-60 hover:border-blue-200 hover:text-blue-500 transition-all duration-300 md:hidden"
+        className="absolute cursor-pointer left-1/2 -translate-x-1/2  z-60 hover:border-blue-200 hover:text-blue-500 transition-all duration-300 lg:hidden"
       >
         <Menu
           className={`transition-all duration-300 absolute ${
@@ -35,7 +35,7 @@ export const LandingNavbar = () => {
       </button>
 
       {/* nav for desktop */}
-      <nav className="flex absolute left-1/2 -translate-x-1/2">
+      <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
         <Link
           href={'/#panorama'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
@@ -46,20 +46,24 @@ export const LandingNavbar = () => {
           href={'/#mapa-del-delito'}
           className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
         >
-          Mapa del delito
+          Mapa del calor
         </Link>
+
         <Link
-          href={'/'}
-          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 hidden md:block"
+          href={'/#asistente-ia'}
+          className="text-lg text-slate-500 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 md:block "
         >
-          Tendencias
+          <div className="flex flex-row gap-1">
+            <Sparkles />
+            <span>Asistente IA</span>
+          </div>
         </Link>
       </nav>
 
       {/* nav for mobile */}
       <div
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className={`bg-slate/20 fixed inset-0 z-50 w-full backdrop-blur-lg md:hidden transition-all duration-500 ${
+        className={`bg-slate/20 fixed inset-0 z-50 w-full backdrop-blur-lg lg:hidden transition-all duration-500 ${
           isNavOpen ? '' : 'opacity-0 pointer-events-none invisible'
         }`}
       >
@@ -74,13 +78,17 @@ export const LandingNavbar = () => {
             href={'/#mapa-del-delito'}
             className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800 "
           >
-            Mapa del delito
+            Mapa del calor
           </Link>
+
           <Link
-            href={'/'}
+            href={'/#asistente-ia'}
             className="text-xl text-slate-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-4xl hover:text-blue-500 transition-all duration-300 hover:bg-blue-100 dark:hover:bg-slate-800"
           >
-            Tendencias
+            <div className="flex flex-row gap-1">
+              <Sparkles />
+              <span>Asistente IA</span>
+            </div>
           </Link>
         </nav>
       </div>

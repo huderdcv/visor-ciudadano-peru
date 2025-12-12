@@ -1,3 +1,4 @@
+import { AssistantSection } from '../features/landing/components/AssistantSection';
 import { HeroSection } from '../features/landing/components/HeroSection';
 import { LandingFooter } from '../features/landing/components/LandingFooter';
 import { LandingNavbar } from '../features/landing/components/LandingNavbar';
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <SummarySection />
         <MapSection />
+        <AssistantSection />
       </main>
       <LandingFooter />
     </>
