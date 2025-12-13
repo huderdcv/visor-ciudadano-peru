@@ -1,9 +1,10 @@
 'use client';
 
 import { useChat } from '@ai-sdk/react';
-import { DefaultChatTransport } from 'ai';
+import { DefaultChatTransport, UIMessage } from 'ai';
 import { Bot, SendHorizonal, Sparkles, User } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
+import { StatusChat } from './assistant-section/StatusChat';
 
 export const AssistantSection = () => {
   const { messages, sendMessage, status } = useChat({
@@ -21,7 +22,7 @@ export const AssistantSection = () => {
           },
         ],
       },
-    ],
+    ] as UIMessage[],
   });
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -59,8 +60,8 @@ export const AssistantSection = () => {
       </h2>
       <p className="text-slate-500 dark:text-slate-400 text-lg mb-10 max-w-4xl mx-auto">
         Pregunta sobre criminalidad, distritos peligrosos o tendencias
-        históricas, etc. Nuestra IA consulta la base de datos por ti para unas
-        respuestas instantáneas.
+        históricas, etc. Nuestra IA consulta la base de datos por ti para
+        ofrecer respuestas instantáneas.
       </p>
       {/* CHAT */}
       <div className="border border-slate-200 dark:border-slate-700 rounded-lg max-w-3xl mx-auto bg-white dark:bg-slate-900 shadow-xl">
@@ -71,13 +72,7 @@ export const AssistantSection = () => {
           </div>
           <div>
             <h3 className="font-bold">Asistente IA</h3>
-            <p className="flex items-center gap-1">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="text-emerald-500 font-semibold">Online</span>
-            </p>
+            <StatusChat status={status} />
           </div>
         </div>
         {/* chat body */}
@@ -93,16 +88,18 @@ export const AssistantSection = () => {
                   <div className="min-w-10 w-10 h-10 flex items-center justify-center rounded-3xl border border-slate-200 dark:border-slate-600">
                     <Bot className="text-blue-600 dark:text-blue-500" />
                   </div>
-                  {message.parts.map((part, index) =>
-                    part.type === 'text' && part.text ? (
-                      <p
-                        key={index}
-                        className="text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 p-3 rounded-xl rounded-tl-none"
-                      >
-                        {part.text}
-                      </p>
-                    ) : null
-                  )}
+                  <div className="grid grid-cols-2 gap-2">
+                    {message.parts.map((part, index) =>
+                      part.type === 'text' && part.text ? (
+                        <p
+                          key={index}
+                          className="text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 p-3 rounded-xl rounded-tl-none"
+                        >
+                          {part.text}
+                        </p>
+                      ) : null
+                    )}
+                  </div>
                 </div>
               );
             } else {

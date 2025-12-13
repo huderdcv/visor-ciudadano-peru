@@ -7,15 +7,18 @@ import {
 } from 'ai';
 import z from 'zod';
 import { Pool } from 'pg';
+import { google } from '@ai-sdk/google';
+import { webSearch } from '@exalabs/ai-sdk';
 //
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
-
+/* 
+But with that information, and finding in the web the current tends, if the user ask you can give information about the user ask, for example, recommendation good places start a business, take vacation, etc. */
 // the ai needs to know my db schema to formulate the queries
 const DB_SCHEMA = `
-You are a SQL expert for a PostgreSQL database about Crime in Peru (Denuncias).
-The database uses a Star Schema.
+You are a SQL expert for a PostgreSQL database about Crime in Peru (Denuncias). 
+The database uses a Star Schema. 
 
 Tables:
 - FACT_DENUNCIAS (fact_id, quantity, crime_key, location_key, date_key)
@@ -33,7 +36,9 @@ export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
 
   const result = streamText({
-    model: 'openai/gpt-4o',
+    // model: google('gemini-2.5-flash-lite'),
+    // model: 'openai/gpt-4o',
+    model: 'google/gemini-2.5-flash',
     messages: convertToModelMessages(messages),
     system: `${DB_SCHEMA}
     Rules:
@@ -44,9 +49,12 @@ export async function POST(req: Request) {
     - current year is 2025.
     - When filtering by strings (like district, province, department), ALWAYS use the 'ILIKE' operator for case-insensitivity.
     - Example: USE "district ILIKE '%Miraflores%'" INSTEAD OF "district = 'Miraflores'".
-    - There are multiple districts named 'Miraflores' in Peru. If the user does not specify a department (like 'Lima' or 'Arequipa'), return the SUM of all of them or group by Department to show the difference.
+    - There are multiple districts named 'Miraflores' in Peru. If the user does not specify a department (like 'Lima' or 'Arequipa'), return the SUM of all of them or group by Department to show the difference. 
+    - When filtering text fields (districts, crimes, etc.), ALWAYS wrap BOTH the column and the value in the unaccent() function to ignore accents. Combine this with ILIKE. 
     `,
+
     tools: {
+      webSearch: webSearch(),
       runQuery: tool({
         description:
           'Execute a SELECT SQL query to fetch data from the database',
@@ -58,6 +66,7 @@ export async function POST(req: Request) {
         }),
         execute: async ({ sql }) => {
           try {
+            console.log({ sql });
             const client = await pool.connect();
             const res = await client.query(sql);
             client.release();
