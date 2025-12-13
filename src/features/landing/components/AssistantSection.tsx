@@ -18,7 +18,7 @@ export const AssistantSection = () => {
         parts: [
           {
             type: 'text',
-            text: '¡Hola! Soy tu asistente de Visor Ciudadano. ¿En qué puedo ayudarte hoy con los datos de seguridad?',
+            text: '¡Hola! Soy tu asistente de Visor Ciudadano. ¿En qué puedo ayudarte con los datos de seguridad?',
           },
         ],
       },
@@ -66,7 +66,7 @@ export const AssistantSection = () => {
       {/* CHAT */}
       <div className="border border-slate-200 dark:border-slate-700 rounded-lg max-w-3xl mx-auto bg-white dark:bg-slate-900 shadow-xl">
         {/* chat header */}
-        <div className="flex gap-3 items-center p-5 border-b border-slate-200 dark:border-slate-700">
+        <div className="flex gap-3 items-center p-3 lg:p-5 border-b border-slate-200 dark:border-slate-700">
           <div className="bg-blue-700 w-10 h-10 flex items-center justify-center rounded-3xl">
             <Sparkles className="  text-white" />
           </div>
@@ -77,7 +77,7 @@ export const AssistantSection = () => {
         </div>
         {/* chat body */}
         <div
-          className="p-5 border-b border-slate-200 dark:border-slate-700 h-130 overflow-y-scroll"
+          className="p-3 lg:p-5 border-b border-slate-200 dark:border-slate-700 h-110 lg:h-130 overflow-y-scroll"
           ref={chatContainerRef}
         >
           {messages.map((message) => {
@@ -88,7 +88,7 @@ export const AssistantSection = () => {
                   <div className="min-w-10 w-10 h-10 flex items-center justify-center rounded-3xl border border-slate-200 dark:border-slate-600">
                     <Bot className="text-blue-600 dark:text-blue-500" />
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 gap-2">
                     {message.parts.map((part, index) =>
                       part.type === 'text' && part.text ? (
                         <p

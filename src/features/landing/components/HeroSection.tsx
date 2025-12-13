@@ -16,10 +16,9 @@ export const HeroSection = () => {
           <span className="text-blue-500 block">Criminalidad en el Perú</span>
         </h1>
         <p className="text-center text-lg md:text-xl sm:max-w-lg md:max-w-xl text-slate-500 dark:text-slate-400 mb-12">
-          La plataforma líder de inteligencia delictiva basada en datos abiertos
-          de la Policía Nacional del Perú (PNP). Consulte denuncias, mapas de
-          calor y rankings de peligrosidad en tiempo real para tomar decisiones
-          informadas sobre dónde vivir, invertir o transitar.
+          Analiza el historial de denuncias desde 2018 hasta 2025 con mapas de
+          calor y rankings de peligrosidad. Obtén datos claros para decidir con
+          seguridad dónde vivir, invertir o transitar
         </p>
         <Link
           href={`/#panorama`}

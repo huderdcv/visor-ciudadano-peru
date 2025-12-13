@@ -57,8 +57,8 @@ export const SummarySection = () => {
           </div>
           <span className="text-slate-600 dark:text-slate-300 ">
             <span className="font-medium">Filtros de Precisión:</span> Segmente
-            la data por año, tipo de delito y ubicación exacta (Ubigeo) para un
-            análisis granular.
+            la data por año, tipo de delito y ubicación exacta para un análisis
+            granular.
           </span>
         </li>
       </ul>
