@@ -66,7 +66,7 @@ export async function POST(req: Request) {
         }),
         execute: async ({ sql }) => {
           try {
-            console.log({ sql });
+            // console.log({ sql });
             const client = await pool.connect();
             const res = await client.query(sql);
             client.release();
