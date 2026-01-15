@@ -51,7 +51,7 @@ The system follows the **Ralph Kimball Business Dimensional Lifecycle**.
 1. **Clone the repo**
 
    ```bash
-   git clone [https://github.com/huderdcv/visor-ciudadano-peru.git](https://github.com/huderdcv/visor-ciudadano-peru.git)
+   git clone https://github.com/huderdcv/visor-ciudadano-peru.git
    ```
 
 2. **Run the application**
