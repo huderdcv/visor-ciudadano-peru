@@ -54,7 +54,18 @@ The system follows the **Ralph Kimball Business Dimensional Lifecycle**.
    git clone https://github.com/huderdcv/visor-ciudadano-peru.git
    ```
 
-2. **Run the application**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Set up Environment Variables Create a .env file:**
+
+   ```.env
+   DATABASE_URL=your_postgres_connection_string
+   GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_key
+   ```
+
+4. **Run the development server**
    ```bash
    npm run dev
    ```
